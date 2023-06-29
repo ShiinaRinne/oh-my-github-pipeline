@@ -1,6 +1,6 @@
 require 'http'
 
-ENV['ACCESS_TOKEN'] = ENV['GITHUB_TOKEN'] if ENV['ACCESS_TOKEN'].blank?
+ENV['ACCESS_TOKEN'] = ENV['GITHUB_TOhttps://github.com/ShiinaRinne/oh-my-github-pipelineKEN'] if ENV['ACCESS_TOKEN'].blank?
 
 class SyncGithub
   def self.sync!
@@ -9,8 +9,8 @@ class SyncGithub
     puts "👉 Sync current user info #{ENV['USER_LOGIN']}"
     FetchCurrentUser.new(ENV["USER_LOGIN"]).run 
 
-    # puts "👇 Sync Issues"
-    # FetchIssues.new(ENV["USER_LOGIN"]).run
+    puts "👇 Sync Issues"
+    FetchIssues.new(ENV["USER_LOGIN"]).run
 
     puts "👇 Sync PullRequests"
     FetchPullRequests.new(ENV["USER_LOGIN"]).run
