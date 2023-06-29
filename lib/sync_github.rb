@@ -9,8 +9,8 @@ class SyncGithub
     puts "👉 Sync current user info #{ENV['USER_LOGIN']}"
     FetchCurrentUser.new(ENV["USER_LOGIN"]).run 
 
-    puts "👇 Sync Issues"
-    FetchIssues.new(ENV["USER_LOGIN"]).run
+    # puts "👇 Sync Issues"
+    # FetchIssues.new(ENV["USER_LOGIN"]).run
 
     puts "👇 Sync PullRequests"
     FetchPullRequests.new(ENV["USER_LOGIN"]).run
